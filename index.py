@@ -4,13 +4,12 @@ import calendar
 import firebase_admin
 from firebase_admin import credentials, firestore
 import re
+from constants import OPENAI_API_KEY
 
 cred = credentials.Certificate("./livefeed-jobs-1f0968160681.json")
 app = firebase_admin.initialize_app(cred)
 
 db = firestore.client()
-
-OPENAI_API_KEY = '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'
 
 openai.api_key = OPENAI_API_KEY
 
