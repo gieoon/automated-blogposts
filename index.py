@@ -82,6 +82,10 @@ def get_keywords():
             blog_title = re.sub(r'>>', '', blog_title)
             blog_title = re.sub(r'\n', '', blog_title)
             blog_title = re.sub('"', '', blog_title)
+            if len(blog_title) > 400:
+                # Bypass this for now.
+                continue
+
             print('one blog_title => ', blog_title)
 
             blog_content = openai.ChatCompletion.create(
