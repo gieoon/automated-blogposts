@@ -5,6 +5,9 @@
 1. Programmatically inserts these articles into the DB as blog posts.
 1. Watch SEO grow :)
 
+# How it works
+
+After generating the blog posts, they are saved into an external Firebase/Firestore DB, which is configured to automatically show up in the website I have created based on [this](https://github.com/gieoon/NextJS-Blank-Template) NextJS Template.
 
 # Virtual Environment
 
