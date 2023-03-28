@@ -33,7 +33,7 @@ def get_keywords():
 
     # Get keywords
     messages=[
-        {"role": "user", "content": "Keywords about IT jobs"}
+        {"role": "user", "content": "List of general keywords for IT tech stacks separated by number."}
     ]
 
     keywords = openai.ChatCompletion.create(
@@ -91,7 +91,7 @@ def get_keywords():
             blog_content = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[
-                    {"role": "user", "content": f'A long informative and humorous blog post without a conclusion with the title: "{blog_title}"'}
+                    {"role": "user", "content": f'A long informative and humorous blog post without a summary or conclusion at the end with the title: "{blog_title}"'}
                 ]
             )
             
