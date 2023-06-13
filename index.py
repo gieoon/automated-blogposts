@@ -37,7 +37,7 @@ def get_keywords():
     ]
 
     keywords = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="babbage",#gpt-3.5-turbo",
         messages=messages
     )
     
@@ -46,7 +46,9 @@ def get_keywords():
 
     keywords = list(map(lambda x: re.sub(r'\d*?\.|\)', '', x).strip(), keywords.split('\n')))
 
+
     print('keywords after regex', keywords)
+    
 
     for keyword in keywords:
 
@@ -61,7 +63,7 @@ def get_keywords():
         # Titles
         
         blog_titles = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
+            model="babbage",#gpt-3.5-turbo",
             messages=messages
         )
         blog_titles = blog_titles.choices[0].message
